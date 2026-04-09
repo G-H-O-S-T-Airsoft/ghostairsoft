@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="O GHOST é uma equipe de São Paulo que pratica o MILSIM (Simulação Militar) utilizando o Airsoft como plataforma.">
+	<meta name="keywords" content="airsoft, ghost, time airsoft, jogar airsoft, milsim, airsoft são paulo, ghost airsoft team, air soft, time airsoft sp, time airsoft são paulo"/>
+    <meta name="author" content="GHOST">
+
+    <title>GHOST - Airsoft Team</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+	
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Estilo adicional para o botão de status do membro -->
+    <style>
+        .nav-status {
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 12px;
+            color: #c9a84c;
+        }
+        .btn-membro {
+            background: #c9a84c;
+            color: #0d1f13 !important;
+            border-radius: 3px;
+            padding: 8px 15px !important;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-membro:hover {
+            background: #e8c97a;
+            transform: scale(1.02);
+        }
+        .btn-sair {
+            background: transparent;
+            border: 1px solid #c9a84c;
+            color: #c9a84c !important;
+        }
+        .btn-sair:hover {
+            background: rgba(201,168,76,0.1);
+        }
+        #user-status {
+            font-size: 11px;
+            color: #c9a84c;
+            margin-left: 10px;
+        }
+        /* Seção restrita */
+        .restricted-section {
+            background: linear-gradient(135deg, #0d1f13, #1a3d22);
+            border-top: 3px solid #c9a84c;
+            border-bottom: 3px solid #c9a84c;
+        }
+        .restricted-section h2 {
+            color: #c9a84c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .restricted-card {
+            background: rgba(26,61,34,0.7);
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .btn-sistema {
+            background: #c9a84c;
+            color: #0d1f13;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        .btn-sistema:hover {
+            background: #e8c97a;
+            transform: translateY(-2px);
+            color: #0d1f13;
+            text-decoration: none;
+        }
+        .btn-login-topo {
+            background: #c9a84c;
+            color: #0d1f13;
+            padding: 6px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .welcome-text {
+            font-size: 12px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand page-scroll" href="#page-top">G.H.O.S.T</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#sobre">Equipe</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#conduta">Conduta</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#exercito">Exército</a>
+                    </li>
+                    <li id="link-sistema" style="display: none;">
+                        <a class="page-scroll" href="http://www.airsoftsuite.fsjsistemas.com.br" target="new">Sistema</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Aliste-se</a>
+                    </li>
+                    <li id="menu-membro">
+                        <!-- O conteúdo será inserido via JavaScript -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">G.H.O.S.T</div>
+				<div class="intro-lead-in">Airsoft Team</div>
+                <a href="#sobre" class="page-scroll btn btn-xl">Saiba mais</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre o GHOST -->
+    <section id="sobre" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sobre a equipe</h2>
+                    <h3 class="section-subheading text-muted">G.H.O.S.T. Airsoft Team</h3>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-md-2 text-center">
+                    <span class="fa-stack fa-4x">
+						<img class="img-circle img-responsive" src="img/logo.gif" alt="">						
+                    </span>
+                </div>
+				<div class="col-md-10">
+                    <p class="text-muted">O G.H.O.S.T é uma equipe de São Paulo que pratica o MILSIM (Simulação Militar) utilizando o Airsoft como plataforma.</p>
+					<p class="text-muted">Com base em técnicas americanas de combate moderno, realizamos nossos treinamentos visando a preparação para atuação em grupo, com disciplina e seriedade, para obter o máximo de realismo e desempenho em combate. A preparação da equipe visa a participação em eventos sérios, realizados dentro da comunidade de Airsoft no Brasil.</p>
+					<p class="text-muted">Fundado por Rodrigo Stracke em fevereiro de 2009, o G.H.O.S.T é uma das equipes pioneiras de airsoft no estado de São Paulo.</p>
+                </div>
+				<div class="col-lg-12 text-center">
+					<br/>
+                    <p class="text-muted text-center"><h5 class="text-center">G.H.O.S.T</h5></p>
+					<p class="text-muted"><h5 class="text-center">Garra - Honra - Ordem - Seriedade - Tática</h5></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Código de conduta GHOST -->
+    <section id="conduta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Código de Conduta</h2>
+                    <h3 class="section-subheading text-muted">G.H.O.S.T. Airsoft Team</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Segurança em primeiro lugar</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Podemos minimizar os riscos de acidentes com precauções básicas:</p>
+									<br/>
+									<em>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Óculos de proteção é equipamento obrigatório.</p>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Considerar o uso de joelheira e cotoveleira, especialmente em áreas CQB.</p>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Manter o FPS dentro dos limites permitidos.</p>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Arma de airsoft não é uma arma de fogo, mas trate-a como uma e evite acidentes.</p>
+									</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Respeito pelos outros</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">O Airsoft é um esporte coletivo, você precisa de pelo menos uma pessoa para jogar contra. Portanto é fundamental o respeito e a seriedade, desta forma todos podem se divertir e conviver em harmonia.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Lute com Honra</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">O Airsoft requer um sistema de honra para registrar mortes. Porém com inúmeras interferências, como o equipamento e o próprio ambiente, é impossível registra-las de maneira 100% eficaz.</p>
+									<br/>
+									<em>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Se você acredita que pode ter sido atingido, mas tem dúvidas, você está morto. Sair com honra é a melhor escolha.</p>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Se você atingiu um oponente e ele não se acusou, ele não está morto.</p>
+										<p class="text-muted text-left"><i class="fa fa-caret-right" aria-hidden="true"></i> Se alguém claramente não está se acusando ou está agindo de má fé, apenas informe ao comando de maneira calma e discreta. Este tipo de atitude não é tolerado na equipe e o comando irá analisar pontualmente cada caso, para previnir falsas acusações ou situações desagradáveis.</p>
+									</em>
+								</div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Respeito às leis</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Armas de airsoft são produtos controlados pelo Exército Brasileiro.</p>
+									<p class="text-muted">As regras para a aquisição e a importação de armas de pressão para airsoft no Brasil estão definidas na Portaria Nº 02 COLOG de 26 de fevereiro de 2010, que regulamenta o art. 26 da Lei 10.826/03 sobre réplicas, simulacros de armas de fogo e armas de pressão.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Respeito
+                                    <br>e
+                                    <br>honra</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Leis para o Airsoft -->
+    <section id="exercito" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Leis para Airsoft</h2>
+                    <h3 class="section-subheading text-muted">Exército Brasileiro</h3>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-md-2 text-center">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-balance-scale fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+				<div class="col-md-10">
+                    <p class="text-muted">As regras para a aquisição e a importação de armas de pressão para airsoft no Brasil estão definidas na Portaria Nº 02 COLOG de 26 de fevereiro de 2010, que regulamenta o art. 26 da Lei 10.826/03 sobre réplicas, simulacros de armas de fogo e armas de pressão.</p>
+					<p class="text-muted">Artigo 26 da Lei 10.826/03 - <i>São vedadas a fabricação, a venda, a comercialização e a importação de brinquedos, réplicas e simulacros de armas de fogo, que com estas possam confundir.</i> Parágrafo único - <i>Excetuam-se da proibição as réplicas e os simulacros destinados à instrução, ao adestramento, ou à coleção de usuário autorizado, nas condições fixadas pelo Comando do Exército.</i></p>
+					<p class="text-muted">Para mais informações, acesse o site do DFPC: <a href="http://www.dfpc.eb.mil.br" target="new">www.dfpc.eb.mil.br</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<br/>
+                    <p class="text-muted text-center"><h5>Documentos disponíveis para download:</h5></p>
+					<ul class="list-inline">
+						<li>
+							<a href="downloads/airsoft_leis_5p.pdf" target="new">
+								<span class="fa-stack fa-4x">
+									<i class="fa fa-circle fa-stack-2x text-primary"></i>
+									<i class="fa fa-file-pdf-o fa-stack-1x fa-inverse"></i>
+								</span>
+								<p>Leis e Portarias que regulamentam o Airsoft</p>
+							</a>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO RESTRITA - SÓ APARECE APÓS LOGIN       -->
+    <!-- ============================================ -->
+    <section id="area-membros" class="restricted-section" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">🔒 Área do Membro</h2>
+                    <h3 class="section-subheading" style="color: #c9a84c;">Conteúdo exclusivo para integrantes da equipe</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="restricted-card text-center">
+                        <i class="fa fa-shield" style="font-size: 48px; color: #c9a84c; margin-bottom: 20px;"></i>
+                        <h4 style="color: #fff;">Bem-vindo, <span id="user-name">Membro</span>!</h4>
+                        <p style="color: #ccc; margin: 20px 0;">
+                            Esta é a área restrita do site. Aqui você encontra informações exclusivas para membros da equipe GHOST.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="http://www.airsoftsuite.fsjsistemas.com.br" target="new" class="btn-sistema">
+                                    📋 Sistema de Presença
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#" id="btn-sair-area" class="btn-sistema" style="background: transparent; border: 1px solid #c9a84c; color: #c9a84c;">
+                                    🚪 Sair da Área
+                                </a>
+                            </div>
+                        </div>
+                        <hr style="border-color: rgba(201,168,76,0.3); margin: 20px 0;">
+                        <p style="font-size: 12px; color: rgba(255,255,255,0.4);">
+                            <i class="fa fa-lock"></i> Conteúdo protegido pelo sistema de autenticação GHOST
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contato para Recrutamento</h2>
+                    <h3 class="section-subheading text-muted">Se interessou pela equipe e tem interesse em participar?<br/>Entre em contato conosco e aliste-se já!</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nome*" id="name" required data-validation-required-message="Informe seu nome.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="E-mail *" id="email" required data-validation-required-message="Informe seu e-mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Telefone *" id="phone" required data-validation-required-message="Informe seu telefone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Mensagem *" id="message" required data-validation-required-message="Digite sua mensagem."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="copyright">Copyright &copy; G.H.O.S.T. Airsoft Team 2020</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+
+    <!-- ============================================ -->
+    <!-- FIREBASE AUTHENTICATION - GESTÃO DE ACESSO   -->
+    <!-- ============================================ -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+        // Sua configuração do Firebase (do sistema de presença)
+        const firebaseConfig = {
+            apiKey: "AIzaSyCg0qK5N6yqrfsa4KPRw5DOGspZVE_F1go",
+            authDomain: "controle-presenca-cec16.firebaseapp.com",
+            projectId: "controle-presenca-cec16",
+            storageBucket: "controle-presenca-cec16.firebasestorage.app",
+            messagingSenderId: "826933103017",
+            appId: "1:826933103017:web:37464beaf19a7eea60dcb8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Elementos do menu
+        const menuMembro = document.getElementById('menu-membro');
+        const linkSistema = document.getElementById('link-sistema');
+        const areaMembros = document.getElementById('area-membros');
+
+        // Função para atualizar a interface baseado no login
+        function atualizarUI(user) {
+            if (user) {
+                // USUÁRIO LOGADO → mostra conteúdo restrito
+                const email = user.email;
+                const nomeExibicao = user.displayName || email.split('@')[0];
+                
+                // Menu: mostra "Área do Membro" com email e botão sair
+                menuMembro.innerHTML = `
+                    <span class="welcome-text" style="color: #c9a84c; font-size: 12px;">
+                        <i class="fa fa-user"></i> ${email}
+                    </span>
+                    <a href="#" id="btn-logout-menu" style="background: #c9a84c; color: #0d1f13; padding: 6px 12px; border-radius: 3px; text-decoration: none; font-size: 12px; font-weight: bold;">
+                        <i class="fa fa-sign-out"></i> Sair
+                    </a>
+                `;
+                
+                // Mostra o link do Sistema no menu
+                linkSistema.style.display = 'block';
+                
+                // Mostra a seção restrita
+                if (areaMembros) {
+                    areaMembros.style.display = 'block';
+                    document.getElementById('user-name').textContent = nomeExibicao;
+                }
+                
+                // Evento do botão sair
+                document.getElementById('btn-logout-menu').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    signOut(auth);
+                });
+                
+                // Evento do botão sair dentro da área restrita
+                const btnSairArea = document.getElementById('btn-sair-area');
+                if (btnSairArea) {
+                    btnSairArea.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        signOut(auth);
+                    });
+                }
+                
+            } else {
+                // USUÁRIO NÃO LOGADO → mostra botão de login
+                menuMembro.innerHTML = `
+                    <a href="#" id="btn-login-menu" class="btn-membro" style="background: #c9a84c; color: #0d1f13; padding: 6px 12px; border-radius: 3px; text-decoration: none; font-size: 12px; font-weight: bold;">
+                        <i class="fa fa-lock"></i> Área do Membro
+                    </a>
+                `;
+                
+                // Esconde o link do Sistema
+                linkSistema.style.display = 'none';
+                
+                // Esconde a seção restrita
+                if (areaMembros) areaMembros.style.display = 'none';
+                
+                // Evento do botão login (abre modal de login)
+                document.getElementById('btn-login-menu').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    abrirModalLogin();
+                });
+            }
+        }
+
+        // Função para criar o modal de login dinâmico
+        function abrirModalLogin() {
+            // Remove modal existente se houver
+            const modalExistente = document.getElementById('modalLoginGhost');
+            if (modalExistente) modalExistente.remove();
+            
+            // Cria o modal
+            const modal = document.createElement('div');
+            modal.id = 'modalLoginGhost';
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.85); z-index: 9999;
+                display: flex; align-items: center; justify-content: center;
+                font-family: 'Montserrat', sans-serif;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background: #1a3d22; border: 2px solid #c9a84c; border-radius: 8px; padding: 30px; max-width: 400px; width: 90%; position: relative;">
+                    <button id="fecharModal" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #c9a84c; font-size: 24px; cursor: pointer;">&times;</button>
+                    <h3 style="color: #c9a84c; text-align: center; margin-bottom: 20px;">
+                        <i class="fa fa-shield"></i> Acesso Restrito
+                    </h3>
+                    <p style="color: #ccc; text-align: center; margin-bottom: 20px; font-size: 12px;">
+                        Utilize suas credenciais do sistema de presença
+                    </p>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="login-email" placeholder="E-mail" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #c9a84c; background: #0d1f13; color: #fff;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <input type="password" id="login-senha" placeholder="Senha" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #c9a84c; background: #0d1f13; color: #fff;">
+                    </div>
+                    <div id="login-error" style="color: #e74c3c; font-size: 12px; text-align: center; margin-bottom: 15px; display: none;"></div>
+                    <button id="btn-logar-modal" style="width: 100%; padding: 12px; background: #c9a84c; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                        Entrar
+                    </button>
+                    <p style="color: #666; text-align: center; margin-top: 15px; font-size: 11px;">
+                        Acesso exclusivo para membros da equipe
+                    </p>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Fechar modal
+            document.getElementById('fecharModal').onclick = () => modal.remove();
+            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+            
+            // Evento de login
+            document.getElementById('btn-logar-modal').onclick = async () => {
+                const email = document.getElementById('login-email').value.trim();
+                const senha = document.getElementById('login-senha').value;
+                const errorDiv = document.getElementById('login-error');
+                
+                errorDiv.style.display = 'none';
+                
+                if (!email || !senha) {
+                    errorDiv.textContent = 'Preencha e-mail e senha';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                try {
+                    await signInWithEmailAndPassword(auth, email, senha);
+                    modal.remove(); // Fecha modal após login bem-sucedido
+                } catch (error) {
+                    errorDiv.textContent = 'E-mail ou senha incorretos';
+                    errorDiv.style.display = 'block';
+                }
+            };
+            
+            // Enter para logar
+            const inputSenha = document.getElementById('login-senha');
+            inputSenha.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') document.getElementById('btn-logar-modal').click();
+            });
+        }
+
+        // Monitora o estado de autenticação
+        onAuthStateChanged(auth, (user) => {
+            atualizarUI(user);
+        });
+    </script>
+
+</body>
+</html>

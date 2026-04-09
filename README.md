@@ -1,0 +1,1 @@
+works on php 5.4
